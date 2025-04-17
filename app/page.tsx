@@ -140,7 +140,7 @@ export default function Home() {
             </div>
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4 mt-4">
               <a
-                href="mailto:your.email@gmail.com"
+                href="mailto:ogboanthony315@gmail.com"
                 className="inline-flex items-center justify-center px-6 py-3 border border-black text-black hover:bg-nigerian hover:border-nigerian hover:text-white transition-all duration-300 rounded-md"
                 aria-label="Email me"
               >
@@ -148,7 +148,7 @@ export default function Home() {
                 Email Me
               </a>
               <a
-                href="https://linkedin.com/in/yourprofile"
+                href="https://www.linkedin.com/in/oteruo-ogbo-0174031a6/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-6 py-3 border border-black text-black hover:bg-nigerian hover:border-nigerian hover:text-white transition-all duration-300 rounded-md"
@@ -158,7 +158,7 @@ export default function Home() {
                 LinkedIn
               </a>
               <a
-                href="https://github.com/yourusername"
+                href="https://github.com/ot-coder"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-6 py-3 border border-black text-black hover:bg-nigerian hover:border-nigerian hover:text-white transition-all duration-300 rounded-md"

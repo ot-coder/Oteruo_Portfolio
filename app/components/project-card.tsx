@@ -12,11 +12,30 @@ export interface ProjectCardProps {
 export default function ProjectCard({ project }: ProjectCardProps) {
     const [isHovered, setIsHovered] = useState(false)
 
+    const handleCardClick = () => {
+        if (project.liveUrl) {
+            window.open(project.liveUrl, '_blank', 'noopener,noreferrer')
+        }
+    }
+
+    const handleLinkClick = (e: React.MouseEvent, url: string) => {
+        e.stopPropagation() // Prevent the card click from triggering
+        window.open(url, '_blank', 'noopener,noreferrer')
+    }
+
     return (
         <Card
             className="overflow-hidden group cursor-pointer transition-all duration-300 transform hover:-translate-y-2"
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
+            onClick={handleCardClick}
+            role="link"
+            tabIndex={0}
+            onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    handleCardClick()
+                }
+            }}
         >
             <div className="relative overflow-hidden aspect-video">
                 <img
@@ -37,7 +56,11 @@ export default function ProjectCard({ project }: ProjectCardProps) {
                 <p className="text-gray-500 mb-4">{project.description}</p>
                 <div className="flex flex-wrap gap-2">
                     {project.tags.map((tag, index) => (
-                        <span key={index} className="px-2 py-1 text-xs font-medium bg-nigerian/10 text-nigerian rounded-full">
+                        <span
+                            key={index}
+                            className="px-2 py-1 text-xs font-medium bg-nigerian/10 text-nigerian rounded-full"
+                            onClick={(e) => e.stopPropagation()} // Prevent tag clicks from triggering card click
+                        >
                             {tag}
                         </span>
                     ))}
@@ -46,8 +69,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
                     {project.repoUrl && (
                         <a
                             href={project.repoUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
+                            onClick={(e) => handleLinkClick(e, project.repoUrl!)}
                             className="inline-flex items-center gap-2 text-sm font-medium text-gray-600 hover:text-black"
                         >
                             <Github className="h-4 w-4" />
@@ -57,8 +79,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
                     {project.liveUrl && (
                         <a
                             href={project.liveUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
+                            onClick={(e) => handleLinkClick(e, project.liveUrl!)}
                             className="inline-flex items-center gap-2 text-sm font-medium text-gray-600 hover:text-black"
                         >
                             <ExternalLink className="h-4 w-4" />
