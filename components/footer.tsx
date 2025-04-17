@@ -7,9 +7,9 @@ export default function Footer() {
       <div className="container px-4 md:px-6">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
           <div className="flex flex-col space-y-2">
-            <h3 className="text-lg font-bold">Your Name</h3>
-            <p className="text-sm text-gray-400">Full-stack Developer</p>
-            <p className="text-sm text-gray-400">Building digital experiences that matter.</p>
+            <h3 className="text-lg font-bold">Oteruo Ogbo</h3>
+            <p className="text-sm text-gray-400">Software Developer</p>
+            <p className="text-sm text-gray-400">Shaping the digital future.</p>
           </div>
           <div className="flex flex-col space-y-2">
             <h3 className="text-lg font-bold">Quick Links</h3>

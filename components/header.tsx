@@ -33,7 +33,7 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? "bg-white text-black shadow-md" : "bg-transparent text-white"
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? "bg-white text-black shadow-md" : pathname === "/" ? "bg-transparent text-black" : "bg-white text-black"
         }`}
     >
       <div className="container mx-auto px-4 md:px-6">
@@ -65,22 +65,20 @@ export default function Header() {
 
       {/* Mobile menu */}
       {isMenuOpen && (
-        <div className="md:hidden bg-white text-black">
-          <div className="container mx-auto px-4 py-4">
-            <nav className="flex flex-col space-y-4">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className={`text-sm font-medium transition-colors hover:text-nigerian ${pathname === link.href ? "font-bold" : ""
-                    }`}
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {link.label}
-                </Link>
-              ))}
-            </nav>
-          </div>
+        <div className="md:hidden">
+          <nav className="container mx-auto px-4 py-4 bg-white">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`block py-2 text-black hover:text-nigerian ${pathname === link.href ? "font-bold" : ""
+                  }`}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {link.label}
+              </Link>
+            ))}
+          </nav>
         </div>
       )}
     </header>
