@@ -33,29 +33,26 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? "bg-white text-black shadow-md" : "bg-transparent text-white"
-      }`}
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? "bg-white text-black shadow-md" : "bg-transparent text-white"
+        }`}
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex h-16 items-center justify-between">
           <Link href="/" className="text-xl font-bold transition-transform hover:scale-105 duration-300">
-            Your Name
+            Oteruo
           </Link>
           <nav className="hidden md:flex space-x-6">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className={`relative text-sm font-medium transition-colors hover:text-nigerian ${
-                  pathname === link.href ? "font-bold" : ""
-                }`}
+                className={`relative text-sm font-medium transition-colors hover:text-nigerian ${pathname === link.href ? "font-bold" : ""
+                  }`}
               >
                 {link.label}
                 <span
-                  className={`absolute -bottom-1 left-0 h-0.5 w-0 bg-nigerian transition-all duration-300 ${
-                    pathname === link.href ? "w-full" : "group-hover:w-full"
-                  }`}
+                  className={`absolute -bottom-1 left-0 h-0.5 w-0 bg-nigerian transition-all duration-300 ${pathname === link.href ? "w-full" : "group-hover:w-full"
+                    }`}
                 ></span>
               </Link>
             ))}
@@ -75,9 +72,8 @@ export default function Header() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`text-sm font-medium transition-colors hover:text-nigerian ${
-                    pathname === link.href ? "font-bold" : ""
-                  }`}
+                  className={`text-sm font-medium transition-colors hover:text-nigerian ${pathname === link.href ? "font-bold" : ""
+                    }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {link.label}

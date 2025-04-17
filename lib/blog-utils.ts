@@ -1,7 +1,15 @@
 // This is a simple in-memory blog post storage
 // In a real application, you would fetch this data from a CMS, database, or file system
 
-interface Post {
+import fs from 'fs'
+import path from 'path'
+import matter from 'gray-matter'
+import { remark } from 'remark'
+import html from 'remark-html'
+
+const postsDirectory = path.join(process.cwd(), 'posts')
+
+export interface Post {
   slug: string
   title: string
   date: string
@@ -108,11 +116,67 @@ greet("Maddison", new Date());</code></pre>
 ]
 
 export function getAllPosts(): Post[] {
-  return posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+  // Get file names under /posts
+  const fileNames = fs.readdirSync(postsDirectory)
+  const allPostsData = fileNames
+    .filter(fileName => fileName.endsWith('.md'))
+    .map(fileName => {
+      // Remove ".md" from file name to get slug
+      const slug = fileName.replace(/\.md$/, '')
+
+      // Read markdown file as string
+      const fullPath = path.join(postsDirectory, fileName)
+      const fileContents = fs.readFileSync(fullPath, 'utf8')
+
+      // Use gray-matter to parse the post metadata section
+      const matterResult = matter(fileContents)
+
+      // Combine the data with the slug
+      return {
+        slug,
+        title: matterResult.data.title,
+        date: matterResult.data.date,
+        excerpt: matterResult.data.excerpt,
+        content: matterResult.content,
+        coverImage: matterResult.data.coverImage,
+      }
+    })
+
+  // Sort posts by date
+  return allPostsData.sort((a, b) => {
+    if (a.date < b.date) {
+      return 1
+    } else {
+      return -1
+    }
+  })
 }
 
-export function getPostBySlug(slug: string): Post | undefined {
-  return posts.find((post) => post.slug === slug)
+export async function getPostBySlug(slug: string): Promise<Post | undefined> {
+  try {
+    const fullPath = path.join(postsDirectory, `${slug}.md`)
+    const fileContents = fs.readFileSync(fullPath, 'utf8')
+
+    // Use gray-matter to parse the post metadata section
+    const matterResult = matter(fileContents)
+
+    // Use remark to convert markdown into HTML string
+    const processedContent = await remark()
+      .use(html)
+      .process(matterResult.content)
+    const contentHtml = processedContent.toString()
+
+    return {
+      slug,
+      title: matterResult.data.title,
+      date: matterResult.data.date,
+      excerpt: matterResult.data.excerpt,
+      content: contentHtml,
+      coverImage: matterResult.data.coverImage,
+    }
+  } catch (error) {
+    return undefined
+  }
 }
 
 // In a real application, you would implement functions to create and update posts

@@ -3,6 +3,12 @@ import { notFound } from "next/navigation"
 import Link from "next/link"
 import { ArrowLeft } from "lucide-react"
 
+interface BlogPostPageProps {
+  params: {
+    slug: string
+  }
+}
+
 export async function generateStaticParams() {
   const posts = getAllPosts()
   return posts.map((post) => ({
@@ -10,8 +16,8 @@ export async function generateStaticParams() {
   }))
 }
 
-export default function BlogPost({ params }: { params: { slug: string } }) {
-  const post = getPostBySlug(params.slug)
+export default async function BlogPostPage({ params }: BlogPostPageProps) {
+  const post = await getPostBySlug(params.slug)
 
   if (!post) {
     notFound()
@@ -29,16 +35,16 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
         </Link>
 
         <div className="mx-auto max-w-3xl">
-          <div className="mb-8">
-            <time dateTime={post.date} className="text-sm text-gray-500">
-              {new Date(post.date).toLocaleDateString("en-US", {
-                year: "numeric",
-                month: "long",
-                day: "numeric",
+          <header className="mb-8">
+            <h1 className="text-4xl font-bold">{post.title}</h1>
+            <time className="text-sm text-muted-foreground" dateTime={post.date}>
+              {new Date(post.date).toLocaleDateString('en-US', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
               })}
             </time>
-            <h1 className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">{post.title}</h1>
-          </div>
+          </header>
 
           {post.coverImage && (
             <div className="mb-8 overflow-hidden rounded-lg">

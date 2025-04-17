@@ -33,14 +33,14 @@ export default function Footer() {
             <h3 className="text-lg font-bold">Connect</h3>
             <div className="flex space-x-4">
               <a
-                href="mailto:your.email@gmail.com"
+                href="mailto:ogboanthony315@gmail.com"
                 className="text-gray-400 hover:text-nigerian transition-colors"
                 aria-label="Email me"
               >
                 <Mail className="h-5 w-5" />
               </a>
               <a
-                href="https://linkedin.com/in/yourprofile"
+                href="https://www.linkedin.com/in/oteruo-ogbo-0174031a6/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-nigerian transition-colors"
@@ -49,7 +49,7 @@ export default function Footer() {
                 <Linkedin className="h-5 w-5" />
               </a>
               <a
-                href="https://github.com/yourusername"
+                href="https://github.com/ot-coder"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-nigerian transition-colors"
@@ -62,7 +62,7 @@ export default function Footer() {
         </div>
         <div className="mt-8 border-t border-gray-800 pt-6">
           <p className="text-center text-xs text-gray-400">
-            &copy; {new Date().getFullYear()} Your Name. All rights reserved.
+            &copy; {new Date().getFullYear()} Ogbo. All rights reserved.
           </p>
         </div>
       </div>
