@@ -2,16 +2,19 @@ import Link from "next/link"
 import { ArrowRight, Mail, Linkedin, Github } from "lucide-react"
 import ProjectCard from "@/components/project-card"
 import { Button } from "@/components/ui/button"
+import type { Project } from "../types"
 
 export default function Home() {
-  // Sample projects - you can replace these with your actual projects
-  const projects = [
+
+  const projects: Project[] = [
     {
       id: 1,
-      title: "E-commerce Platform",
-      description: "A full-stack e-commerce solution with payment integration",
-      tags: ["React", "Node.js", "MongoDB"],
+      title: "Interactive Rap Page",
+      description: "A simple chat page which upcoming producers or lyricists can make use of Open AI to generate lyrics",
+      tags: ["Typescript", "Node.js"],
       image: "/placeholder.svg?height=400&width=600",
+      repoUrl: "https://github.com/ot-coder/rap-page",
+      liveUrl: "https://rap-page.vercel.app"
     },
     {
       id: 2,
@@ -19,13 +22,17 @@ export default function Home() {
       description: "Interactive dashboard for financial portfolio tracking",
       tags: ["TypeScript", "Chart.js", "Firebase"],
       image: "/placeholder.svg?height=400&width=600",
+      repoUrl: "https://github.com/yourusername/portfolio-dashboard",
+      liveUrl: "https://portfolio-dashboard.demo.com"
     },
     {
       id: 3,
-      title: "Mobile Fitness App",
-      description: "Cross-platform mobile application for fitness tracking",
+      title: "Footie For Life",
+      description: "Ticketing and research help for football fans",
       tags: ["React Native", "Redux", "Firebase"],
       image: "/placeholder.svg?height=400&width=600",
+      repoUrl: "https://github.com/ot-coder/FootieForLife",
+      liveUrl: "https://fitness-app.demo.com"
     },
   ]
 
@@ -36,10 +43,10 @@ export default function Home() {
           <div className="flex flex-col items-center space-y-4 text-center">
             <div className="space-y-2">
               <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
-                Hello, I'm <span className="text-gray-300">Your Name</span>
+                Hi, I'm <span className="text-gray-300">Oteruo Ogbo</span>
               </h1>
               <p className="mx-auto max-w-[700px] text-gray-400 md:text-xl">
-                Full-stack developer specializing in creating elegant, functional, and user-friendly applications.
+                Passionate computer science student and developer interested in learning everyday.
               </p>
             </div>
             <div className="space-x-4">
@@ -70,13 +77,13 @@ export default function Home() {
             <div className="space-y-4">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">About Me</h2>
               <p className="text-gray-500 md:text-xl">
-                I'm a passionate developer with expertise in building modern web applications. With a strong foundation
-                in both frontend and backend technologies, I create seamless user experiences that solve real-world
-                problems.
+                I'm a young computer science student interested in Machine Learning, fullstack development and Javascript. I am
+                always eager to learn new things and try fun projects with interesting technologies.
+
               </p>
               <p className="text-gray-500 md:text-xl">
-                When I'm not coding, you can find me exploring new technologies, contributing to open-source projects,
-                or writing about my experiences on my blog.
+                When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, playing or watching football,
+                writing about my experiences on my blog and solving puzzles.
               </p>
             </div>
             <div className="flex justify-center">

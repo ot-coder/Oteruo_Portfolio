@@ -133,18 +133,15 @@ export function createPost(post: Omit<Post, "slug">): Post {
 
 export function updatePost(slug: string, updatedPost: Partial<Post>): Post | undefined {
   const index = posts.findIndex((post) => post.slug === slug)
-  \
-    Post | undefined {
-  const index = posts.findIndex((post) => post.slug === slug)
-  
+
   if (index === -1) {
     return undefined
   }
-  
+
   posts[index] = {
     ...posts[index],
     ...updatedPost,
   }
-  
+
   return posts[index]
 }
