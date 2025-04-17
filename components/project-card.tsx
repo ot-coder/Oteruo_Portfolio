@@ -1,16 +1,9 @@
 "use client"
 
 import { useState } from "react"
-import { ArrowUpRight } from "lucide-react"
+import { ArrowUpRight, Github, ExternalLink } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
-
-interface Project {
-  id: number
-  title: string
-  description: string
-  tags: string[]
-  image: string
-}
+import type { Project } from "../types"
 
 interface ProjectCardProps {
   project: Project
@@ -19,24 +12,41 @@ interface ProjectCardProps {
 export default function ProjectCard({ project }: ProjectCardProps) {
   const [isHovered, setIsHovered] = useState(false)
 
+  const handleCardClick = () => {
+    if (project.liveUrl) {
+      window.open(project.liveUrl, '_blank', 'noopener,noreferrer')
+    }
+  }
+
+  const handleLinkClick = (e: React.MouseEvent, url: string) => {
+    e.stopPropagation() // Prevent the card click from triggering
+    window.open(url, '_blank', 'noopener,noreferrer')
+  }
+
   return (
     <Card
       className="overflow-hidden group cursor-pointer transition-all duration-300 transform hover:-translate-y-2"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      onClick={handleCardClick}
+      role="link"
+      tabIndex={0}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          handleCardClick()
+        }
+      }}
     >
       <div className="relative overflow-hidden aspect-video">
         <img
           src={project.image || "/placeholder.svg"}
           alt={project.title}
-          className={`w-full h-full object-cover transition-transform duration-500 ${
-            isHovered ? "scale-110" : "scale-100"
-          }`}
+          className={`w-full h-full object-cover transition-transform duration-500 ${isHovered ? "scale-110" : "scale-100"
+            }`}
         />
         <div
-          className={`absolute inset-0 bg-nigerian bg-opacity-80 flex items-center justify-center opacity-0 transition-opacity duration-300 ${
-            isHovered ? "opacity-100" : ""
-          }`}
+          className={`absolute inset-0 bg-nigerian bg-opacity-80 flex items-center justify-center opacity-0 transition-opacity duration-300 ${isHovered ? "opacity-100" : ""
+            }`}
         >
           <ArrowUpRight className="text-white h-10 w-10" />
         </div>
@@ -46,10 +56,34 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         <p className="text-gray-500 mb-4">{project.description}</p>
         <div className="flex flex-wrap gap-2">
           {project.tags.map((tag, index) => (
-            <span key={index} className="px-2 py-1 text-xs font-medium bg-nigerian/10 text-nigerian rounded-full">
+            <span
+              key={index}
+              className="px-2 py-1 text-xs font-medium bg-nigerian/10 text-nigerian rounded-full"
+              onClick={(e) => e.stopPropagation()} // Prevent tag clicks from triggering card click
+            >
               {tag}
             </span>
           ))}
+        </div>
+        <div className="mt-4 flex items-center gap-4">
+          {project.repoUrl && (
+            <button
+              onClick={(e) => handleLinkClick(e, project.repoUrl!)}
+              className="inline-flex items-center gap-2 text-sm font-medium text-gray-600 hover:text-black"
+            >
+              <Github className="h-4 w-4" />
+              Repository
+            </button>
+          )}
+          {project.liveUrl && (
+            <button
+              onClick={(e) => handleLinkClick(e, project.liveUrl!)}
+              className="inline-flex items-center gap-2 text-sm font-medium text-gray-600 hover:text-black"
+            >
+              <ExternalLink className="h-4 w-4" />
+              Live Demo
+            </button>
+          )}
         </div>
       </CardContent>
     </Card>
