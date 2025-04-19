@@ -89,7 +89,7 @@ export default function Home() {
             <div className="flex justify-center">
               <div className="relative w-[300px] h-[300px] overflow-hidden rounded-full border-4 border-black">
                 <img
-                  src="/profile.jpeg?height=300&width=300"
+                  src="profile.jpeg"
                   alt="Profile"
                   className="object-cover"
                   width={300}
