@@ -12,7 +12,7 @@ export default function Home() {
       title: "Interactive Rap Page",
       description: "A simple chat page which upcoming producers or lyricists can make use of Open AI to generate lyrics",
       tags: ["Typescript", "Node.js"],
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/rap-page.png?height=400&width=600",
       repoUrl: "https://github.com/ot-coder/rap-page",
       liveUrl: "https://rap-page.vercel.app"
     },
