@@ -18,21 +18,21 @@ export default function Home() {
     },
     {
       id: 2,
-      title: "Portfolio Dashboard",
-      description: "Interactive dashboard for financial portfolio tracking",
-      tags: ["TypeScript", "Chart.js", "Firebase"],
-      image: "/placeholder.svg?height=400&width=600",
-      repoUrl: "https://github.com/yourusername/portfolio-dashboard",
-      liveUrl: "https://portfolio-dashboard.demo.com"
+      title: "Dino Game",
+      description: "Personal attempt at the famous interactive dinosaur game",
+      tags: ["Java"],
+      image: "/dino-app.png?height=400&width=600",
+      repoUrl: "https://github.com/ot-coder/DinoApp",
+      liveUrl: "https://github.com/ot-coder/DinoApp"
     },
     {
       id: 3,
       title: "Footie For Life",
       description: "Ticketing and research help for football fans",
-      tags: ["React Native", "Redux", "Firebase"],
-      image: "/placeholder.svg?height=400&width=600",
+      tags: ["TypeScript", "CSS", "JavaScript", "FireBase"],
+      image: "/footie.png?height=400&width=600",
       repoUrl: "https://github.com/ot-coder/FootieForLife",
-      liveUrl: "https://fitness-app.demo.com"
+      liveUrl: "https://footie-for-life.vercel.app"
     },
   ]
 
