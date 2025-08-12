@@ -3,10 +3,8 @@ import { ArrowRight, Mail, Linkedin, Github } from "lucide-react"
 import ProjectCard from "@/components/project-card"
 import { Button } from "@/components/ui/button"
 import type { Project } from "../types"
-import { projects } from "@/lib/projects"
 
 export default function Home() {
-
   const projects: Project[] = [
     {
       id: 1,
@@ -113,7 +111,7 @@ export default function Home() {
             </div>
           </div>
           <div className="grid grid-cols-1 gap-6 mt-8 md:grid-cols-2 lg:grid-cols-3">
-            {featuredProjects && featuredProjects.map((project: Project) => (
+            {projects.map((project) => (
               <ProjectCard key={project.id} project={project} />
             ))}
           </div>
