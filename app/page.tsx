@@ -119,7 +119,7 @@ export default function Home() {
             <Link href="/projects">
               <Button
                 variant="outline"
-                className="border-white text-white hover:bg-nigerian hover:border-nigerian hover:text-white transition-all duration-300"
+                className="border-white text-white hover:bg-nigerian hover:border-nigerian hover:text-green transition-all duration-300"
               >
                 View All Projects <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
