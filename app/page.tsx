@@ -3,6 +3,7 @@ import { ArrowRight, Mail, Linkedin, Github } from "lucide-react"
 import ProjectCard from "@/components/project-card"
 import { Button } from "@/components/ui/button"
 import type { Project } from "../types"
+import { projects } from "@/lib/projects"
 
 export default function Home() {
 
@@ -105,14 +106,14 @@ export default function Home() {
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">My Projects</h2>
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Featured Projects</h2>
               <p className="mx-auto max-w-[700px] text-gray-400 md:text-xl">
-                Here are some of the projects I've worked on. Each one represents a unique challenge and solution.
+                Here are some of my featured projects. Each one represents a unique challenge and solution.
               </p>
             </div>
           </div>
           <div className="grid grid-cols-1 gap-6 mt-8 md:grid-cols-2 lg:grid-cols-3">
-            {projects.map((project) => (
+            {featuredProjects && featuredProjects.map((project: Project) => (
               <ProjectCard key={project.id} project={project} />
             ))}
           </div>
