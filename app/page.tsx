@@ -24,6 +24,7 @@ export default function Home() {
       repoUrl: "https://github.com/ot-coder/DinoApp",
       liveUrl: "https://github.com/ot-coder/DinoApp"
     },
+    /*
     {
       id: 3,
       title: "Footie For Life",
@@ -33,6 +34,7 @@ export default function Home() {
       repoUrl: "https://github.com/ot-coder/FootieForLife",
       liveUrl: "https://footie-for-life.vercel.app"
     },
+    */
   ]
 
   return (
