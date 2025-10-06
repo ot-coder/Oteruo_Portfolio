@@ -1,7 +1,7 @@
 ---
 title: "UDACITY: Introducing Generative AI with AWS"
 date: "2024-06-01"
-excerpt: "A default post about machine learning by OT."
+excerpt: "My journey partaking in this course on AI with AWS."
 coverImage: "/placeholder.svg?height=500&width=1000"
 ---
 
