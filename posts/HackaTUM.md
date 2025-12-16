@@ -2,7 +2,7 @@
 title: "HackaTUM: 48 Hours, New Technologies, and a Voice-Controlled Future?"
 date: "2025-12-15"
 excerpt: "Experience my first Hackathon."
-coverImage: "/hackaheader.jpg?height=500&width=1000"
+coverImage: "/hackerheader.jpg?height=500&width=1000"
 ---
 
 
@@ -54,6 +54,8 @@ The Interface (JavaScript/TypeScript): We needed a bridge between the human and
     width="1000"
     height="500"
 />
+![Screenshot of the system at work](/demopage.PNG)
+
 
 The Brains (Google Gemini): We didn't want a simple "keyword command" system. We needed a proper understanding. We connected our solution to Google Gemini to handle the heavy lifting of Natural Language Processing.
   Input: "Create a workflow for expense approvals."
