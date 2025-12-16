@@ -84,6 +84,7 @@ In the end, we successfully demoed the interface's ability to capture voice, pro
     width="1000"
     height="500"
 />
+![Picture of me explaining the functionalities](/presenting.JPG)
 
 
 
@@ -98,6 +99,6 @@ So you see, I definitely choose to stick to this "toxic relationship" with codin
     width="1000"
     height="500"
 />
-
+![Official certificate received](/certificate.png)
 
 
