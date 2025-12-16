@@ -1,8 +1,8 @@
 ---
 title: "HackaTUM: 48 Hours, New Technologies, and a Voice-Controlled Future?"
 date: "2025-12-15"
-excerpt: "Come, experience a hackathon like no other."
-coverImage: "/hackerheader.jpg?height=500&width=1000"
+excerpt: "Experience my first Hackathon."
+coverImage: "/hackaheader.jpg?height=500&width=1000"
 ---
 
 
@@ -49,7 +49,7 @@ We had 48 hours (Friday arrival, Saturday start, Sunday 10 AM presentation) to t
 The Interface (JavaScript/TypeScript): We needed a bridge between the human and the machine. We built a custom interface using JavaScript (and TypeScript for type safety) to capture the user's voice commands. This frontend was responsible for capturing audio and acting as the primary interaction point.
 
 <img
-    src="/demopage.png"
+    src="/demopage.PNG"
     alt ="Screenshot of the system at work"
     width="1000"
     height="500"
@@ -77,7 +77,7 @@ In the end, we successfully demoed the interface's ability to capture voice, pro
 
 
 <img
-    src="/presenting.png"
+    src="/presenting.JPG"
     alt ="Picture of me explaining the demo"
     width="1000"
     height="500"
