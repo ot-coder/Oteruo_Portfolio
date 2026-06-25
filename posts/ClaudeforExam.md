@@ -2,7 +2,7 @@
 title: "Claude for Organization"
 date: "2026-06-25"
 excerpt: "How can you utilise AI for organization?"
-coverImage: "/Cheader.jpg?height=500&width=1000"
+coverImage: "/Cheader.jpeg?height=500&width=1000"
 ---
 
 
@@ -20,7 +20,7 @@ Claude Premium was at the centre of how I organised the whole thing, and the fea
     width="500"
     height="250"
 />
-![Screenshot of my project prompt](/Prompt.jpeg)
+![Screenshot of my project](/ProjectC.jpeg)
 
 Projects let you create a separate environment for each task, each with its own uploaded files, conversation history, and custom instructions. That last part is the one that matters. Within each project, you tell Claude who it is and what it is there to do, and that instruction lives only in that project, nowhere else. Yes, this feature can be used to manage working projects in the industry, but why not hack it to your own advantage as a student?  The reason this is more than just organisation is simple: HCI is a human-centred design module built around reflective writing and conceptual thinking. Algorithms are proof-based and mathematical. Haskell operates on a functional programming model that requires an entirely different mental posture than everything else on the list. You cannot approach those three the same way, and you should not be using the same AI configuration for all three either. Separating by module is not tidiness for its own sake. It is what gets you a tool that actually adapts rather than one that just answers questions.
 
