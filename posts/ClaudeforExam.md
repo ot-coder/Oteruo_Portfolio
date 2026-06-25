@@ -2,7 +2,7 @@
 title: "Claude for Organization"
 date: "2026-06-25"
 excerpt: "How can you utilise AI for organization?"
-coverImage: "/hackerheader.jpg?height=500&width=1000"
+coverImage: "/Cheader.jpg?height=500&width=1000"
 ---
 
 
@@ -14,7 +14,13 @@ I was heading into eight finals over two months, covering modules that had almos
 
 Claude Premium was at the centre of how I organised the whole thing, and the feature that made it work was Projects within the web version.
 
-[insert image]
+<img
+    src="/ProjectC.jpeg"
+    alt ="Screenshot of how projects look"
+    width="500"
+    height="250"
+/>
+![Screenshot of my project prompt](/Prompt.jpeg)
 
 Projects let you create a separate environment for each task, each with its own uploaded files, conversation history, and custom instructions. That last part is the one that matters. Within each project, you tell Claude who it is and what it is there to do, and that instruction lives only in that project, nowhere else. Yes, this feature can be used to manage working projects in the industry, but why not hack it to your own advantage as a student?  The reason this is more than just organisation is simple: HCI is a human-centred design module built around reflective writing and conceptual thinking. Algorithms are proof-based and mathematical. Haskell operates on a functional programming model that requires an entirely different mental posture than everything else on the list. You cannot approach those three the same way, and you should not be using the same AI configuration for all three either. Separating by module is not tidiness for its own sake. It is what gets you a tool that actually adapts rather than one that just answers questions.
 
@@ -25,8 +31,8 @@ Find below the exact prompt I used for my Computer Networks module: 
 <img
     src="/Prompt.jpeg"
     alt ="Screenshot of my project prompt"
-    width="1000"
-    height="500"
+    width="500"
+    height="250"
 />
 ![Screenshot of my project prompt](/Prompt.jpeg)
 
@@ -41,10 +47,8 @@ From those two inputs, I prompted Claude to generate a schedule in two formats a
 I was free to focus on what actually mattered, and that is how we can use these tools. 
 I did not get it right the first time, by the way. I would rate my initial version about 72 out of 100. A few weeks in, I realised I had underestimated how long Networks would take and had been too confident about where I stood on Secure Cyber Systems. I went back to the root project, adjusted the weightings and had a new ICS file in my calendar within minutes. That iteration is what separates mere use of the tools from understanding the route to perfection. “Strive for the magis” iykyk. It is not a one-and-done process. Going back, refining what you fed in, getting a better output, that is where it actually starts working for you.
 
-[insert picture]
-
 Most people use Claude to ask questions, debug code, or knock something out quickly. That is fine, but it is also the minimum. These different tools can do so much more if you prompt them right. Dropping a calendar file into a system you already check every day, building prompts around how you actually learn, connecting outputs to the tools that already run your life, that is where the real efficiency is. Not just faster. Structurally better organised.
 In the next post, I go into how I used this at the individual module level, including how I used Claude's prediction mechanics to pre-empt exam questions and why that worked better than I expected.
 
-So watch out for that.
+So, go ahead and embrace these tools, it can only go up from here!
 
