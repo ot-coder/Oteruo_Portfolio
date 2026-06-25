@@ -2,7 +2,7 @@
 title: "Claude for Organization"
 date: "2026-06-25"
 excerpt: "How can you utilise AI for organization?"
-coverImage: "/Cheader.jpeg?height=500&width=1000"
+coverImage: "/CHeader.jpeg?height=500&width=1000"
 ---
 
 
