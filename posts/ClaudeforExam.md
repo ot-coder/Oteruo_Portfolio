@@ -60,3 +60,5 @@ In the next post, I go into how I used this at the individual module level, incl
 
 So, go ahead and embrace these tools, it can only go up from here!
 
+
+Claude Prompt: [here](https://github.com/ot-coder/Prompts-of-life)
