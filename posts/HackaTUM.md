@@ -51,8 +51,8 @@ The Interface (JavaScript/TypeScript): We needed a bridge between the human and
 <img
     src="/demopage.PNG"
     alt ="Screenshot of the system at work"
-    width="1000"
-    height="500"
+    width="500"
+    height="250"
 />
 ![Screenshot of the system at work](/demopage.PNG)
 
@@ -81,8 +81,8 @@ In the end, we successfully demoed the interface's ability to capture voice, pro
 <img
     src="/presenting.JPG"
     alt ="Picture of me explaining the demo"
-    width="1000"
-    height="500"
+    width="500"
+    height="250"
 />
 ![Picture of me explaining the functionalities](/presenting.JPG)
 
@@ -96,8 +96,8 @@ So you see, I definitely choose to stick to this "toxic relationship" with codin
 <img
     src="/certificate.png"
     alt ="Official certificate received"
-    width="1000"
-    height="500"
+    width="500"
+    height="250"
 />
 ![Official certificate received](/certificate.png)
 
